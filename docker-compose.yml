@@ -3,12 +3,12 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./Front
     ports:
       - "3000:3000"
 
   backend:
     build:
-      context: ./backend
+      context: ./Back
     ports:
       - "3001:3001"
