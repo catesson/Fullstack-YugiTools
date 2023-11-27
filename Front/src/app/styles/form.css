@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.searchForm input, .searchForm select, .connectForm input {
+    @apply text-red-900;
+    @apply text-sm;
+    @apply py-2;
+    @apply pl-2;
+    @apply pr-5;
+    @apply shadow-lg;
+    @apply outline-none;
+    @apply bg-gray-600;
+    @apply bg-opacity-10;    
+    @apply border-transparent;  
+    @apply border-solid;
+    @apply border-2;
+    @apply rounded-xl;
+    @apply focus:shadow-none;
+    @apply focus:border-red-900;
+    @apply w-40
+  }
+
+  .connectForm input{
+    @apply w-full;
+  }
+  /* connetion form  */
+  .connectForm .label-input{
+    @apply w-5/6;
+    @apply md:w-1/2;
+  }
+
+ /* Search form*/
+  .searchForm #name{
+    @apply w-full;
+  }
+   .monsterSearch, .magicSearch, .trapSearch{
+    @apply flex;
+    @apply flex-wrap;
+    @apply justify-center;
+    @apply gap-4
+
+  }.monsterSearch{
+    @apply w-full;
+  }
+    
+  .magicSearch, .trapSearch{
+    @apply w-10/12;
+    @apply lg:w-2/4;
+    @apply sm:w-full;
+   
+  }
+  .searchForm label, 
+  .connectForm label {
+    @apply text-sm;
+    @apply text-red-900;
+    @apply text-opacity-80
+  }
+  .label-input{
+    @apply flex;
+    @apply flex-col;
+  }
+
+  .hover-onglet{
+    
+      background-position: left bottom; /* OR left bottom*/
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.5s;
+      border: solid 1px;
+    
+  }
+  .hover-onglet::before{opacity: 0.5;}
+
+  .hover-onglet:hover, .hover-onglet--active, .hover-onglet:active {
+    background-size: 100% 100%;
+
+  } 
+  .magicSearch.hidden, .monsterSearch.hidden, .trapSearch.hidden{
+    display:none;
+  }
+  .Monster, .Monster[type=button]{
+    color : #C0730A;
+    background-image: linear-gradient(#c0740a33 0 0)
+    
+  }
+  .Spell, .Spell[type=button]{
+    color : #007504;
+    background-image: linear-gradient(#00750433 0 0)
+  }
+  .Trap, .Trap[type=button]{
+    color : #81044a;
+    background-image: linear-gradient(#81044a33 0 0)
+  }
+  
+  .Skill, .Skill[type=button]{
+    color : #081971;
+    background-image: linear-gradient(#08197133 0 0)
+  }
+  .searchForm button[type=submit]{
+    @apply bg-red-900;
+    @apply text-white;
+    @apply -ml-5;
+    @apply px-6;
+    @apply rounded-xl;
+    @apply hover:bg-red-800;
+    @apply active:shadow-[inset_0_2px_4px_0_rgb(0,0,0,0.4);]
+  }
+  

@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.minWidth{
+  min-width: 384px;
+}
+p {
+  @apply text-sm ;
+  @apply md:text-base;
+}
+h1{
+  @apply text-xl font-bold md:text-2xl lg:text-3xl lg:py-2
+}
+h2{
+  @apply text-base font-light italic md:text-lg lg:text-xl
+}
+
+
+
+.hover-underline {
+  background-image: linear-gradient(#fff 0 0);
+  background-position: left bottom; /* OR left bottom*/
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s;
+}
+
+.hover-underline:hover, .hover-underline--active, .hover-underline:active {
+  background-size: 100% 3px;
+} 
+
+.myTransition{
+  transition: height 0.3s ease;
+}
+
+.btnCalculator-basic{
+  @apply w-12;
+  @apply h-12;
+  @apply md:w-16;
+  @apply md:h-16;
+}
+.btnCalculator-large{
+  @apply w-40;
+  @apply h-12;
+  @apply md:w-52;
+  @apply md:h-16;
+}
+.btnCalculator-haut{
+  @apply w-16;
+  @apply h-16;
+  @apply md:w-24;
+  @apply md:h-32;
+  @apply text-7xl;
+}
+.btnCalculator{
+  @apply border-4;
+  @apply  flex;
+  @apply items-center ;
+  @apply justify-center;
+  @apply  border-red-900 ;
+  @apply rounded-xl;
+  @apply  text-red-900;
+  @apply  font-bold;
+  @apply  active:bg-red-900;
+  @apply  active:text-white; 
+  @apply text-xl;
+  @apply  md:text-3xl;
+}
+
+.btnCalculator-active{
+  @apply  bg-red-900;
+  @apply  text-white;
+}
+
+.connectBtn p,
+.profilBtn p{
+  @apply overflow-hidden;
+  @apply w-0;
+  transition: all 0.5s ease-in-out 
+}
+
+.connectBtn:hover p{
+  width:90px;
+}
+
+.profilBtn:hover p{
+  @apply w-14;
+}
+.btnCancel{
+  @apply border-white;
+  @apply text-white;
+  @apply bg-red-900;
+}
+
+.btnValidation{
+  @apply border-white text-white bg-green-900;
+
+}
