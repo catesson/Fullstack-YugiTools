@@ -16,7 +16,7 @@ jobs:
     - name: Build and push Docker images
       run: |
         docker-compose build
-        echo "suenven" | docker login -u "DockerSuneven" --password-stdin
+        echo "DockerSuneven" | docker login -u "suenven" --password-stdin
         docker-compose push
 
     - name: Deploy to GitHub Pages
